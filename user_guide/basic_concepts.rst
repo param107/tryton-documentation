@@ -1,7 +1,7 @@
 Basic Concepts
 ==============
 
-Explain some basic concepts here
+
 
 
 Product

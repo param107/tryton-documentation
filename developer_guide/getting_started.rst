@@ -4,8 +4,38 @@ Getting Started
 
 Setting up a development environment
 ------------------------------------
+In the previous chapter you have seen how to install tryton client on your
+machine. Now, lets start with setting up the development environment for
+tryton. 
 
-TODO
+Steps for setting up a development environment for tryton.
+
+1. First check Python is running. To do this you can simply type **python** in
+   terminal and press **enter**.Then it will open the python interactive
+   shell with "**>>>**". If it works same like this, it means you have
+   python in you machine and you can simply leave Python with **exit()**
+   command.
+   
+2. Next, Install Posgres database. Steps for installing Postgres can be
+   found from `Postgres Installation <http://wiki.postgresql.org/wiki/Detailed_installation_guides\>`_
+   Install the database and give the database user postgres a new
+   password.
+
+3. Set up the virtual environment and install tryton client and trytond.
+You can directly install Tryton using pip command-line tool in your
+virtualev.
+
+.. code-block:: python
+
+    $ pip install trytond
+    $ pip install tryton
+    $ pip install tryton_module_name
+
+    Replace module_name with the name of the module you want to install
+
+
+
+
 
 Hello World (in progress)
 ------------------------

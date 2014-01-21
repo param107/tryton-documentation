@@ -1,9 +1,19 @@
 Basic Concepts
 ==============
 
-**Models**
+**Models** 
 
-**Views** The views are used to display records of an object to th user.
+
+**class trytond.model.Model([id[,**kwargs]])**
+This is the base class that every kind of model inherits. It defines
+common attributes of all models.
+For details description about Models in tryton refer to `Tryton Model Docs <http://doc.tryton.org/3.0/trytond/doc/ref/models/models.html/>`_
+
+
+**Views** 
+
+
+The views are used to display records of an object to th user.
 In tryton, objects can have several views, it is the action, that opens
 the window, that tells which views must be used. The view are built from
 XML that is stored in the databases with the object.ir.ui.view.

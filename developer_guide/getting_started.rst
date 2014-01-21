@@ -246,3 +246,41 @@ those menus execute.
 What we are going to do now is to create an action that will be triggered by the submenu *Books*. The first menu *Library*
 will trigger no action, because we want it to be only a summary menu. The books menu, though, will open the windows where
 we are going to input and browse the books records.
+
+Creating Reports
+------------------------------------------------------------------------------------
+Add the following line to the file 'library.xml' into the /data tag :
+
+.. code-block:: xml
+
+        <record model="ir.action.report" id="report_library">
+            <field name="name">Book</field>
+            <field name="model">library.Book</field>
+            <field name="report_name">library.book</field>
+            <field name="report">library/book.odt</field>
+        </record>
+        <record model="ir.action.keyword" id="report_library_book">
+            <field name="keyword">form_print</field>
+            <field name="model">library.book,-1</field>
+            <field name="action" ref="report_library"/>
+        </record>
+
+Now create the file book.odt inside your module.
+In this file add the following lines by adding a placeholder in your odt
+file.
+
+.. code-block:: xml
+
+   <for each="library in objects">
+   <library.title>
+   <library.isbn>
+   <library.subject>
+   <library.abstract>
+   </for>
+
+In case you are dealing with ods file. For adding a placeholder you have
+to add a hyperlink.
+
+.. image:: images/ods.png
+    :width: 500pt
+

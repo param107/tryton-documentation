@@ -8,7 +8,7 @@ Basic Concepts
 This is the base class that every kind of model inherits. It defines
 common attributes of all models.
 For details description about Models in tryton refer to `Tryton Model Docs <http://doc.tryton.org/3.0/trytond/doc/ref/models/models.html/>`_
-
+A complete library model is explained in the previous chapter.
 
 **Views** 
 
@@ -25,12 +25,7 @@ So generally, they are defined in xml files with this kind of xml:
     <record model="ir.ui.view" id="view_id">
         <field name="model">model name</field>
         <field name="type">type name</field>
-        <!--field name="inherit" ref="inherit_view_id"/-->
-        <field name="arch" type="xml">
-            <![CDATA[
-            View XML ...
-            ]]>
-        </field>
+        <field name="inherit" ref="inherit_view_id"/>
     </record>
 
 Active Records
@@ -50,7 +45,7 @@ Extending Tryton (Inheritance)
 Tryton modules can be easily extended. Models and Views need to be
 extended using Inheritence.
 
-**Models Inheritence** : To inherit an existing model (like Company), once just needs to
+**Models Inheritence** : To inherit an existing model (like Company), one just needs to
 instantiate a class with the same _name attribute:
 
 .. code-block:: python
@@ -64,8 +59,8 @@ instantiate a class with the same _name attribute:
     
     Company()
 
-**Extending Views** : Each inherit view must start with data tag.
-** xpath **
+**Extending Views** : Each inherit view must start with data tag. **xpath**
+
 * expr : the xpath expression to find a node in the inherited view.
 * position : Define the position from the finded node, it can be before,
 after, replacem, inside or replace_attributes which will change the
@@ -88,6 +83,9 @@ attributes.
             <field name="employee_code"/>
         </xpath>
     </data>
+
+Importing Wizard
+------------------------------------------------------------------
 
 
 WebServices

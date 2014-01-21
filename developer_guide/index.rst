@@ -6,6 +6,8 @@ Developer Guide
 
    getting_started
    basic_concepts
+   methods
+   reports
    how_to_get_help
 
 Advanced Concepts:

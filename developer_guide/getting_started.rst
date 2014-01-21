@@ -17,7 +17,7 @@ Steps for setting up a development environment for tryton.
    command.
    
 2. Next, Install Posgres database. Steps for installing Postgres can be
-   found from `Postgres Installation <http://wiki.postgresql.org/wiki/Detailed_installation_guides\>`_
+   found from `Postgres Installation <http://wiki.postgresql.org/wiki/Detailed_installation_guides/>`_
    Install the database and give the database user postgres a new
    password.
 
